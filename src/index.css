@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --color-bg: #f5f4f0;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0ede8;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.14);
+  --color-text: #1a1a18;
+  --color-text-muted: #7a7872;
+  --color-text-faint: #b0ada6;
+
+  --accent: #e24b4a;
+  --accent-dark: #c03838;
+  --accent-light: #fceaea;
+
+  --green: #1d9e75;
+  --green-light: #e1f5ee;
+  --purple: #534ab7;
+  --purple-light: #eeedfe;
+  --amber: #ba7517;
+  --amber-light: #faeeda;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #141412;
+    --color-surface: #1e1e1b;
+    --color-surface-2: #272724;
+    --color-border: rgba(255,255,255,0.08);
+    --color-border-strong: rgba(255,255,255,0.14);
+    --color-text: #f0ede8;
+    --color-text-muted: #8a8780;
+    --color-text-faint: #504e48;
+    --accent-light: #3a1515;
+    --green-light: #04342c;
+    --purple-light: #26215c;
+    --amber-light: #412402;
+  }
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border-strong); border-radius: 2px; }

@@ -1,0 +1,232 @@
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Back ── */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1.25rem 1.25rem 0.75rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.back:hover { opacity: 0.75; }
+.back:active { opacity: 0.5; }
+
+.backIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Video ── */
+.videoWrapper {
+  margin: 0 1.25rem 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid var(--color-border);
+  aspect-ratio: 16 / 9;
+}
+
+.videoFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111;
+}
+
+.videoPlayBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+}
+
+.videoPlaceholderText {
+  font-size: 13px;
+  color: #555;
+}
+
+.videoId {
+  font-size: 11px;
+  color: #444;
+  letter-spacing: 0.5px;
+  background: rgba(255,255,255,0.06);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* ── Body ── */
+.body {
+  padding: 1.25rem 1.25rem 0;
+}
+
+.catPill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.catStrength { background: #faece7; color: #993c1d; }
+.catAccessory { background: #eeedfe; color: #534ab7; }
+.catCardio { background: #e1f5ee; color: #0f6e56; }
+
+@media (prefers-color-scheme: dark) {
+  .catStrength { background: #3a1510; color: #f0997b; }
+  .catAccessory { background: #1e1c40; color: #afa9ec; }
+  .catCardio { background: #052e22; color: #5dcaa5; }
+}
+
+.exName {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.05;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.exDayTag {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Stats ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.statCardWide {
+  grid-column: 1 / -1;
+}
+
+.statLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.statValSm {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-text);
+  padding-top: 2px;
+}
+
+/* ── Section ── */
+.sectionLabel {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+/* ── Muscles ── */
+.muscleTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 1.5rem;
+}
+
+.muscleTag {
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* ── Tip ── */
+.tipBox {
+  display: flex;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 14px 16px;
+}
+
+.tipIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+.tipText {
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 400px) {
+  .back { padding: 1rem 1rem 0.5rem; }
+  .videoWrapper { margin: 0 1rem; }
+  .body { padding: 1rem 1rem 0; }
+  .exName { font-size: 28px; }
+  .statVal { font-size: 26px; }
+}

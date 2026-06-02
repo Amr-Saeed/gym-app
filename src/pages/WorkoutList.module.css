@@ -1,0 +1,273 @@
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.25rem 0.5rem;
+}
+
+.headerLabel {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: 38px;
+  line-height: 1;
+  color: var(--color-text);
+  letter-spacing: 1px;
+}
+
+.headerSub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.headerBadge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 1rem 1.25rem 0;
+}
+
+.tab {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.tab:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.tab:active {
+  transform: scale(0.97);
+}
+
+.tabActive {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.tabNum {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.tabActive .tabNum {
+  color: #fff;
+}
+
+.tabLabel {
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.tabActive .tabLabel {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── Day Header ── */
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.dayTag {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 1px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 9px;
+}
+
+.dayFocus {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.dayCount {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ── Exercise List ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 1.25rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+  width: 100%;
+  text-align: left;
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:active {
+  transform: scale(0.985);
+}
+
+/* Exercise Icon */
+.exIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.iconStrength { background: #faece7; }
+.iconAccessory { background: #eeedfe; }
+.iconCardio { background: #e1f5ee; }
+
+@media (prefers-color-scheme: dark) {
+  .iconStrength { background: #3a1510; }
+  .iconAccessory { background: #1e1c40; }
+  .iconCardio { background: #052e22; }
+}
+
+/* Exercise Info */
+.exInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.exName {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.exMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.catPill {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.catStrength { background: #faece7; color: #993c1d; }
+.catAccessory { background: #eeedfe; color: #534ab7; }
+.catCardio { background: #e1f5ee; color: #0f6e56; }
+
+@media (prefers-color-scheme: dark) {
+  .catStrength { background: #3a1510; color: #f0997b; }
+  .catAccessory { background: #1e1c40; color: #afa9ec; }
+  .catCardio { background: #052e22; color: #5dcaa5; }
+}
+
+.exWeight {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Right side */
+.exRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.setsBadge {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 400px) {
+  .headerTitle { font-size: 32px; }
+  .tabs { gap: 6px; padding: 0.75rem 1rem 0; }
+  .header { padding: 1.25rem 1rem 0.5rem; }
+  .dayHeader { padding: 1rem 1rem 0.5rem; }
+  .list { padding: 0 1rem; }
+  .exName { font-size: 14px; }
+  .setsBadge { font-size: 10px; }
+}
